@@ -3,8 +3,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import { addSocial, deleteSocial } from '../store/socialMediaSlice';
 import { useHistory } from 'react-router-dom';
 
-export default function SocialMediaPage() {
-  const socials = useSelector((state) => state.social);
+export default function SocialMedia() {
+  const socials = useSelector((state) => state.social.media);
   const dispatch = useDispatch();
   const history = useHistory();
 

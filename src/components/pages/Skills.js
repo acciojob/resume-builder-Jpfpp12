@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { addSkill, deleteSkill } from '../store/skillsSlice';
 import { useHistory } from 'react-router-dom';
 
-export default function SkillsPage() {
+export default function Skills() {
   const skills = useSelector((state) => state.skills);
   const dispatch = useDispatch();
   const history = useHistory();

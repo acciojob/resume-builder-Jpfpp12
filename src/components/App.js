@@ -5,36 +5,39 @@ import { Provider } from 'react-redux';
 import store from './store';
 
 // Import your page components
-import ProfilePage from './pages/Profile';
-import EducationPage from './pages/Education';
-import SkillsPage from './pages/Skills';
-import ProjectsPage from './pages/Projects';
-import SocialMediaPage from './pages/Social Media';
-import FinalResumePage from './pages/Final Resume';
+import Profile from './pages/Profile';
+import Education from './pages/Education';
+import Skills from './pages/Skills';
+import Projects from './pages/Projects';
+import SocialMedia from './pages/SocialMedia';
+import FinalResume from './pages/Final Resume';
 
 function App() {
   return (
     <Provider store={store}>
       {/* Do not remove the main div */}
       <Router>
-        <Switch>
-          {/* Redirect root to /profile */}
-          <Route exact path="/">
-            <Redirect to="/profile" />
-          </Route>
+        <div>
+          <h1>RESUME GENERATOR</h1>
+          <Switch>
+            {/* Redirect root to /profile */}
+            <Route exact path="/">
+              <Redirect to="/profile" />
+            </Route>
 
-          <Route path="/profile" component={ProfilePage} />
-          <Route path="/education" component={EducationPage} />
-          <Route path="/skills" component={SkillsPage} />
-          <Route path="/projects" component={ProjectsPage} />
-          <Route path="/social" component={SocialMediaPage} />
-          <Route path="/resume" component={FinalResumePage} />
+            <Route path="/profile" component={Profile} />
+            <Route path="/education" component={Education} />
+            <Route path="/skills" component={Skills} />
+            <Route path="/projects" component={Projects} />
+            <Route path="/social" component={SocialMedia} />
+            <Route path="/resume" component={FinalResume} />
 
-          {/* Optional: Catch-all route for 404 */}
-          <Route path="*">
-            <div>Page Not Found</div>
-          </Route>
-        </Switch>
+            {/* Optional: Catch-all route for 404 */}
+            <Route path="*">
+              <div>Page Not Found</div>
+            </Route>
+          </Switch>
+        </div>
       </Router>
     </Provider>
   );

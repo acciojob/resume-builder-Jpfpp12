@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { addProject, deleteProject } from '../store/projectsSlice';
 import { useHistory } from 'react-router-dom';
 
-export default function ProjectsPage() {
+export default function Projects() {
   const projects = useSelector((state) => state.projects);
   const dispatch = useDispatch();
   const history = useHistory();

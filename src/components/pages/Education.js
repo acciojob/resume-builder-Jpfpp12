@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { addEducation, deleteEducation } from '../store/educationSlice';
 import { useHistory } from 'react-router-dom';
 
-export default function EducationPage() {
+export default function Education() {
   const educationList = useSelector((state) => state.education);
   const dispatch = useDispatch();
   const history = useHistory();
@@ -46,7 +46,7 @@ export default function EducationPage() {
 
   return (
     <div>
-      <h2>Education Details</h2>
+      <h2>Add your Education Details</h2>
       <input
         name="courseName"
         placeholder="Course Name"

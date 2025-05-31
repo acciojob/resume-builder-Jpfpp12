@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { updateProfile } from '../store/profileSlice';
 import { useHistory } from 'react-router-dom';
 
-export default function ProfilePage() {
+export default function Profile() {
   const profile = useSelector((state) => state.profile);
   const dispatch = useDispatch();
   const history = useHistory();
@@ -21,7 +21,7 @@ export default function ProfilePage() {
 
   return (
     <div>
-      <h2>Profile Information</h2>
+      <h2>Add your profile details</h2>
       <form>
         <input
           type="text"
