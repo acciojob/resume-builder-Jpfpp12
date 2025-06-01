@@ -8,7 +8,12 @@ export default function Profile() {
   const dispatch = useDispatch();
   const history = useHistory();
 
-  const [formData, setFormData] = useState(profile);
+  const [formData, setFormData] = useState({
+    courseName: '',
+    completionYear: '',
+    college: '',
+    percentage: ''
+  });
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });

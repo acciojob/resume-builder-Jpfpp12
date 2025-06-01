@@ -4,7 +4,7 @@ import { addSocial, deleteSocial } from '../store/socialMediaSlice';
 import { useHistory } from 'react-router-dom';
 
 export default function SocialMedia() {
-  const socials = useSelector((state) => state.social.media);
+  const socials = useSelector((state) => state.social);
   const dispatch = useDispatch();
   const history = useHistory();
 
@@ -33,7 +33,7 @@ export default function SocialMedia() {
     <div>
       <h2>Social Media Links</h2>
       <input
-        name="Social"
+        name="social"
         placeholder="Enter social media link"
         value={socialLink}
         onChange={(e) => setSocialLink(e.target.value)}
@@ -54,9 +54,7 @@ export default function SocialMedia() {
       </ul>
 
       <button type="button" id="back" onClick={handleBack}>Back</button>
-      <button type="button" id="save_continue" onClick={handleNext}>
-        Save & Continue
-      </button>
+      <button type="button" id="next" onClick={handleNext}>Next</button>
     </div>
   );
 }
